@@ -1,21 +1,32 @@
-import { Video, MapPin } from 'lucide-react';
+import { Video, Map, Menu } from 'lucide-react';
 
-export const Header = () => {
+interface HeaderProps {
+  toggleSidebar: () => void;
+}
+
+export const Header = ({ toggleSidebar }: HeaderProps) => {
   return (
-    <header className="bg-slate-900/50 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+    <header className="h-16 border-b border-border bg-card/50 backdrop-blur-md flex items-center px-4 justify-between sticky top-0 z-50">
+      <div className="flex items-center gap-3">
+        <button 
+          onClick={toggleSidebar}
+          className="lg:hidden p-2 hover:bg-secondary rounded-md transition-colors"
+        >
+          <Menu className="w-6 h-6" />
+        </button>
         <div className="flex items-center gap-2 text-primary">
           <Video className="w-6 h-6" />
-          <h1 className="text-xl font-bold tracking-tight text-white">
-            LA<span className="text-primary">Live</span>
-          </h1>
+          <h1 className="text-xl font-bold tracking-tight">LA<span className="text-foreground">Live</span></h1>
         </div>
-        <div className="flex items-center gap-4 text-sm text-slate-400">
-          <div className="flex items-center gap-1">
-            <MapPin className="w-4 h-4" />
-            <span>Los Angeles, CA</span>
-          </div>
-          <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+      </div>
+      
+      <div className="flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-2 text-sm text-muted-foreground">
+          <Map className="w-4 h-4" />
+          <span>Live Traffic & Views</span>
+        </div>
+        <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+          <span className="text-xs font-bold text-primary">LA</span>
         </div>
       </div>
     </header>
