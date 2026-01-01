@@ -1,34 +1,16 @@
 # LA Live Cams
 
-A modern, responsive webcam viewer for Los Angeles using React, Vite, Tailwind CSS, and Leaflet.
+A modern, responsive web application to view live webcams around Los Angeles.
 
 ## Features
+- Interactive Map with camera locations
+- Live video streaming (YouTube/HLS support)
+- Searchable camera list with thumbnails
+- Dark mode UI
 
-- 🎥 Live video streaming (YouTube/HLS support)
-- 🗺️ Interactive map with camera markers
-- 📱 Fully responsive design (Mobile/Desktop)
-- 🌑 Dark mode UI
+## Setup
 
-## Getting Started
-
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-2. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-3. Open http://localhost:5173
-
-## Tech Stack
-
-- React 18
-- TypeScript
-- Vite
-- Tailwind CSS
-- React Leaflet (Maps)
-- React Player (Video)
-- Lucide React (Icons)
+```bash
+npm install
+npm run dev
+```
