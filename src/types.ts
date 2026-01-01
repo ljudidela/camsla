@@ -1,8 +1,9 @@
 export interface Camera {
   id: string;
-  name: string;
+  title: string;
   location: string;
-  coordinates: [number, number]; // [lat, lng]
+  lat: number;
+  lng: number;
   url: string;
   thumbnail: string;
   type: 'youtube' | 'hls';
